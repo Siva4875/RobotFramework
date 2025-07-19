@@ -3,17 +3,17 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/KetkiAshtankar/RobotFrameWork.git'
+                git branch: 'main', url: 'https://github.com/Siva4875/RobotFramework.git'
             }
         }
         stage('Install Requirements') {
             steps {
-                bat '"C:\\Users\\Ketki Ashtankar\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
+                bat '"C:\\Users\\Siva Kumar\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m pip install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                bat '"C:\\Users\\Ketki Ashtankar\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m robot TestCodes'
+                bat '"C:\\Users\\Siva Kumar\\AppData\\Local\\Programs\\Python\\Python313\\python.exe" -m robot TestCodes'
             }
         }
     }
